@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 const Layout = ({
   children,
-  title = 'This is the default title',
+  title = 'Orbit Movies',
 }) => {
   return (
     <div className="h-screen">
