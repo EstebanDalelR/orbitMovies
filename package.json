@@ -6,6 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "autoprefixer": "^10.0.2",
+    "next": "latest",
+    "postcss": "^8.1.10",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "tailwindcss": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.19.7",
+    "@types/react": "^16.14.2",
+    "@types/react-dom": "^16.9.4",
+    "typescript": "^4.0.5"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EstebanDalelR/orbitMovies.git"
