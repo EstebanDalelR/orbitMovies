@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import Image from 'next/image'
 const Layout = ({
   children,
   title = 'This is the default title',
@@ -13,26 +14,21 @@ const Layout = ({
       </Head>
       <header>
         <nav className="w-full h-12 flex items-center justify-between shadow z-20 border-b border-gray-300 px-4">
-          <Link href="/">
-            <a>Home</a>
-          </Link>{' '}
-          |
-          <Link href="/about">
-            <a>About</a>
-          </Link>{' '}
-          |
-          <Link href="/contact">
-            <a>Contact</a>
-          </Link>
+          <Image src="/orbit-group-logo.svg" width={50} height={50} />
+          <div className="w-2/5 flex justify-around">
+
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+            <Link href="/about">
+              <a>About</a>
+            </Link>
+            <a href="https://www.themoviedb.org/">The Movie DB</a>
+          </div>
         </nav>
       </header>
-      <div className="w-full h-full bg-gray-200 flex">
-        <div className="h-full w-1/12 bg-white z-10 px-2 py-3 border-r border-gray-300">
-          h
-        </div>
-        <div className="h-full w-11/12">
+      <div className="w-full h-full bg-gray-200 p-4">
           {children}
-        </div>
       </div>
 
       <footer>{'I`m here to stay'}</footer>
