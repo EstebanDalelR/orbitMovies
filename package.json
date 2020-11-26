@@ -4,7 +4,10 @@
   "description": "A movie dashboard",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc"
   },
   "dependencies": {
     "autoprefixer": "^10.0.2",
