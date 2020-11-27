@@ -15,8 +15,7 @@ const Layout = ({
       <header>
         <nav className="w-full h-12 flex items-center justify-between shadow z-20 border-b border-gray-300 px-4">
           <Image src="/orbit-group-logo.svg" width={50} height={50} />
-          <div className="w-2/5 flex justify-around">
-
+          <div className="w-2/3 md:w-2/5 flex justify-around">
             <Link href="/">
               <a>Home</a>
             </Link>
