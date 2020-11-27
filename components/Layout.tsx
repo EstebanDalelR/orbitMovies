@@ -27,7 +27,7 @@ const Layout = ({
           </div>
         </nav>
       </header>
-      <div className="w-full h-full bg-gray-200 p-4">
+      <div className="w-full h-full bg-gray-100 p-4">
         {children}
       </div>
 
