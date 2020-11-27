@@ -6,7 +6,7 @@ const Layout = ({
   title = 'Orbit Movies',
 }) => {
   return (
-    <div className="h-screen">
+    <div className="h-full">
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
@@ -28,10 +28,16 @@ const Layout = ({
         </nav>
       </header>
       <div className="w-full h-full bg-gray-200 p-4">
-          {children}
+        {children}
       </div>
 
-      <footer>{'I`m here to stay'}</footer>
+      <footer>
+        <a
+          className="w-full flex justify-center py-2 text-white bg-gray-800"
+          href="estebandalelr.co">
+          Created by Esteban Dalel R
+          </a>
+      </footer>
     </div>
   )
 }
