@@ -6,7 +6,7 @@ const Layout = ({
   title = 'Orbit Movies',
 }) => {
   return (
-    <div className="h-full">
+    <div className="h-full min-h-screen">
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
@@ -27,7 +27,7 @@ const Layout = ({
           </div>
         </nav>
       </header>
-      <div className="w-full h-full bg-gray-100 p-4">
+      <div className="w-full h-full bg-gray-100 p-4 min-h-screen">
         {children}
       </div>
 
