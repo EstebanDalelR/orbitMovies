@@ -1,5 +1,6 @@
 import { InferGetServerSidePropsType } from 'next'
 import { useEffect, useState } from 'react'
+import useAuthenticatedSearch from "../hooks/useAuthenticatedSearch"
 
 const index = ({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const [shownMovies, setShownMovies] = useState([])
@@ -7,17 +8,24 @@ const index = ({ data }: InferGetServerSidePropsType<typeof getServerSideProps>)
   useEffect(() => {
     setShownMovies(movies)
   }, [movies])
-  const filterMovies = (query) => {
-    let filtered = movies.filter((movie) =>
-      movie.original_title.toLowerCase().includes(query.toLowerCase())
-      || movie.title.toLowerCase().includes(query.toLowerCase()))
-    setShownMovies(filtered)
+  const searchMovies = (query) => {
+    useAuthenticatedSearch(query)
+      .then(resp =>
+        resp.json().then(data => {
+          let filtered = movies.filter((movie) =>
+            movie.original_title.toLowerCase().includes(query.toLowerCase())
+            || movie.title.toLowerCase().includes(query.toLowerCase()))
+          let movieArray
+          movieArray = data.results
+          setShownMovies([...filtered, ...movieArray])
+        })
+      )
   }
   return (
     <div>
       <div className="w-full flex items-center justify-center">
         <input
-          onChange={e => filterMovies(e.target.value)}
+          onChange={e => searchMovies(e.target.value)}
           placeholder="Search for movies"
           className="w-full md:w-1/2 lg:w-1/3 rounded my-2 h-7 border border-gray-400 px-2 py-1"
         ></input>
