@@ -1,8 +1,7 @@
-import { InferGetServerSidePropsType } from 'next'
 import { useEffect, useState } from 'react'
 import useAuthenticatedSearch from "../hooks/useAuthenticatedSearch"
 
-const index = ({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const index = ({ data }) => {
   const [shownMovies, setShownMovies] = useState([])
   let { movies, config } = data
   useEffect(() => {
@@ -39,10 +38,9 @@ const index = ({ data }: InferGetServerSidePropsType<typeof getServerSideProps>)
 }
 export default index
 
-import { GetServerSideProps } from 'next'
 import MovieCard from '../components/MovieCard'
 type Data = { movies, config }
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const top_rated = await (await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.TMDB_KEY}`)).json()
   const popular = await (await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.TMDB_KEY}`)).json()
   let movies = [...top_rated.results, ...popular.results]
