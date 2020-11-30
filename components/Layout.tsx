@@ -19,10 +19,12 @@ const Layout = ({
             <Link href="/">
               <a>Home</a>
             </Link>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-            <a href="https://www.themoviedb.org/">The Movie DB</a>
+            <a href="https://github.com/EstebanDalelR/orbitMovies" rel="noopener noreferrer">
+              About
+            </a>
+            <a href="https://www.themoviedb.org/" rel="noopener noreferrer">
+              The Movie DB
+            </a>
           </div>
         </nav>
       </header>
