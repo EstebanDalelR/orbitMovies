@@ -5,6 +5,6 @@ export const useAuthenticatedSearch = (query) => {
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_TOKEN}`
     }
   }
-  return fetch(`https://api.themoviedb.org/3/search/company?query=${query}`, defaultOptions)
+  return fetch(`https://api.themoviedb.org/3/search/movie?query=${query}`, defaultOptions)
 }
 export default useAuthenticatedSearch
