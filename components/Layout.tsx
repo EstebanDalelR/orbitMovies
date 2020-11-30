@@ -19,10 +19,16 @@ const Layout = ({
             <Link href="/">
               <a>Home</a>
             </Link>
-            <a href="https://github.com/EstebanDalelR/orbitMovies" rel="noopener noreferrer">
+            <a
+              target="_blank"
+              href="https://github.com/EstebanDalelR/orbitMovies"
+              rel="noopener noreferrer">
               About
             </a>
-            <a href="https://www.themoviedb.org/" rel="noopener noreferrer">
+            <a
+              target="_blank"
+              href="https://www.themoviedb.org/"
+              rel="noopener noreferrer">
               The Movie DB
             </a>
           </div>
