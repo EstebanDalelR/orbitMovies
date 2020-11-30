@@ -12,7 +12,7 @@ Everything was made using [NextJS](https://nextjs.org/), [React](https://reactjs
 
 ## Result
 The product is a mobile-first, server-side rendered searchable UI that preloads the Top and Popular movies, connected using both authentication methods that proves that no Angular is needed and that the job should be mine. 
-Also, the pages gets a (perfect score in the speed test)[https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Forbit-movies.vercel.app%2F&tab=mobile].
+Also, the pages gets a [perfect score in the speed test](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Forbit-movies.vercel.app%2F&tab=mobile).
 
 ## Live Page
 You can see the live deploymentent [here](https://orbit-movies.vercel.app/).
