@@ -10,6 +10,9 @@ module.exports = {
         'accent-1': '#333',
       },
     },
+    textColor:{
+      "houm": "#ff5000"
+    }
   },
   variants: {},
   plugins: [],
