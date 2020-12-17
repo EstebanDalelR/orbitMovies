@@ -34,7 +34,7 @@ const Layout = ({
           </div>
         </nav>
       </header>
-      <div className="w-full h-full bg-gray-100 p-4 min-h-screen">
+      <div className="w-full h-full bg-gray-50 p-4 min-h-screen">
         {children}
       </div>
 
