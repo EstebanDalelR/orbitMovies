@@ -13,8 +13,8 @@ const Layout = ({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <header>
-        <nav className="w-full h-12 flex items-center justify-between shadow z-20 border-b border-gray-300 px-4">
-          <Image src="/orbit-group-logo.svg" width={50} height={50} />
+        <nav className="w-full h-16 flex items-center justify-between shadow z-20 border-b border-gray-300 px-4">
+          <Image src="/houm.png" width={100} height={50} />
           <div className="w-2/3 md:w-2/5 flex justify-around">
             <Link href="/">
               <a>Home</a>
@@ -34,7 +34,7 @@ const Layout = ({
           </div>
         </nav>
       </header>
-      <div className="w-full h-full bg-gray-50 p-4 min-h-screen">
+      <div className="w-full h-full bg-gray-50 p-4 min-h-screen md:px-20 lg:px-32 xl:px-40">
         {children}
       </div>
 
